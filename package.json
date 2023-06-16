@@ -1,0 +1,28 @@
+{
+  "name": "tabnews-clone",
+  "version": "1.0.0",
+  "description": "[curso.dev]: Reconstrução do site https://www.tabnews.com.br/",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JaySaints/tabnews-clone.git"
+  },
+  "keywords": [
+    "NodeJS",
+    "NextJS"
+  ],
+  "author": "Pablo J. Santos",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JaySaints/tabnews-clone/issues"
+  },
+  "homepage": "https://github.com/JaySaints/tabnews-clone#readme",
+  "dependencies": {
+    "next": "^13.1.6",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
