@@ -1,14 +1,15 @@
-test("GET to /api/v1/status Check properties", async () => {
+test("GET to /api/v1/status check properties", async () => {
   const response = await fetch("http://localhost:3000/api/v1/status");
   const responseBody = await response.json();
 
-  // console.log(responseBody);
-
   expect(response.status).toBe(200);
 
-  expect(responseBody.updated_at).toBeDefined();
-
   const parseUpdatedAt = new Date(responseBody.updated_at).toISOString();
-
   expect(responseBody.updated_at).toEqual(parseUpdatedAt);
+
+  expect(responseBody.dependencies.database.version).toBe("16.2");
+
+  expect(responseBody.dependencies.database.max_connections).toEqual(100);
+
+  expect(responseBody.dependencies.database.opened_connections).toEqual(1);
 });
